@@ -11,9 +11,10 @@ const CreatePost = (props) => {
         let newPost = {
             Author: postAuthor,
             Post: postBody,
-            timestamp: Date()
+            //timestamp: Date()
         }
-        props.addNewPost(newPost);
+        props.addNewPostProperty(newPost);
+        console.log(newPost)
     }
 
     return ( 

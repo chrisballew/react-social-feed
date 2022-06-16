@@ -8,10 +8,10 @@ const DisplayPosts = (props) => {
             return (
                 <tbody>
                     <tr style={{'marginTop': '1em'}}>
-                        <th>{post.name}</th>
+                        <th>{post.Author}</th>
                     </tr>
                     <tr style={{'marginTop': '1em'}}>
-                        <td>{post.post}</td>
+                        <td>{post.Post}</td>
                     </tr>
                     <tr style={{'marginTop': '1em'}}>
                     <td><LikeButton onLikeClick={props.onLikeClick} onDislikeClick={props.onDislikeClick} index={index} post={post}  /></td>
