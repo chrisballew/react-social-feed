@@ -9,17 +9,15 @@ const CreatePost = (props) => {
     function handleSubmit(event) {
         event.preventDefault();
         let newPost = {
-            postAuthor: postAuthor,
-            postBody: postBody,
-            reaction: 'neutral'
-        };
-        props.addNewPostProperty(newPost)
-        setPostAuthor('')
-        setPostBody('')
+            Author: postAuthor,
+            Post: postBody,
+            timestamp: Date()
+        }
+        props.addNewPost(newPost);
     }
 
     return ( 
-        <div>
+        <div className='displayedPost'>
             <form onSubmit={handleSubmit}>
                 <label>Name</label>
                 <input type='text' value = {postAuthor} onChange={(event) => {setPostAuthor(event.target.value)}}/>
