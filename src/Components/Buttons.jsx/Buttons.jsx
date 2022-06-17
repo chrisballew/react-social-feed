@@ -1,15 +1,33 @@
 import React, { useState } from 'react';
+import './Buttons.css'
+
 
 const LikeButton = (props) => {
 
-    return ( <div>
-        <button type='button' className={`${props.post.reaction==='liked'?'liked':'neutral'} likeBtn`} onClick={()=>props.onLikeClick(props.index)}>
+    const [likeButtonClass, setLikeButtonClass] =useState('inactive');
+    const [dislikeButtonClass, setDiskikeButtonClass] =useState('inactive');
+
+    function LikeClick(){
+        if(likeButtonClass === 'inactive'){
+            setLikeButtonClass('active');
+            setDiskikeButtonClass('inactive');
+        }
+    }
+
+    function DislikeClick(){
+        if(dislikeButtonClass === 'inactive'){
+            setLikeButtonClass('inactive');
+            setDiskikeButtonClass('active');
+        }
+    }
+
+    return (
+    <div>
+        <button type='button' className={likeButtonClass} onClick={LikeClick}>
             Like
-            <span class="LikeCount" >0</span>
         </button>
-        <button type='button' className={`${props.post.reaction==='disliked'?'disliked':'neutral'} likeBtn`} onClick={()=>props.onDislikeClick(props.index)}>
+        <button type='button' className={dislikeButtonClass} onClick={DislikeClick}>
             Dislike
-            <span className="DislikeCount" >0</span>
         </button>
     </div> );
 }

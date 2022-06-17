@@ -14,7 +14,7 @@ const DisplayPosts = (props) => {
                         <td>{post.Post}</td>
                     </tr>
                     <tr style={{'marginTop': '1em'}}>
-                    <td><LikeButton onLikeClick={props.onLikeClick} onDislikeClick={props.onDislikeClick} index={index} post={post}  /></td>
+                    <td><LikeButton onLikeClick={props.LikeClick} onDislikeClick={props.DislikeClick} index={index} post={post}  /></td>
                     </tr>
                 </tbody>
             );

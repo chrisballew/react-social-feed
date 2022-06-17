@@ -1,0 +1,36 @@
+.likeButtonClass{
+    color: green;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.dislikeButtonClass{
+    color: red;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.active{
+    background-color: green;
+    fill: white;
+    border-color: green;
+    border-radius: 30px;
+}
+
+.inactive{
+    color: black;
+    border-radius: 30px;
+    border-color: white;
+}
+
+.likeButtonClass{
+    margin-right: 170px;
+}
