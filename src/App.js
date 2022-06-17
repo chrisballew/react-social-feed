@@ -12,8 +12,6 @@ function App() {
     setPosts(tempPosts)
   }
 
-
-
   return (
     <div>
           <div className="border-box">
